@@ -1,0 +1,43 @@
+@-webkit-keyframes zoom-font-size {
+  0%   { font-size: 0; }
+  100% { font-size: 4em; }
+}
+@-moz-keyframes zoom-font-size {
+  0%   { font-size: 0; }
+  100% { font-size: 4em; }
+}
+@-o-keyframes zoom-font-size {
+  0%   { font-size: 0; }
+  100% { font-size: 4em; }
+}
+@keyframes zoom-font-size {
+  0%   { font-size: 0; }
+  100% { font-size: 4em; }
+}
+
+.countdown {
+  text-transform: uppercase;
+  text-align: center;
+  height: 100%;
+  color: #0275d8!important;
+
+  -webkit-animation: zoom-font-size 2s normal forwards; /* Safari 4+ */
+  -moz-animation:    zoom-font-size 2s normal forwards; /* Fx 5+ */
+  -o-animation:      zoom-font-size 2s normal forwards; /* Opera 12+ */
+  animation:         zoom-font-size 2s normal forwards;
+
+}
+
+.countdown > div > span {
+  margin-right: 10px;
+}
+
+.countdown__days {
+  font-size: 3em;
+}
+
+.countdown > div {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}

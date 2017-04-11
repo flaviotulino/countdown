@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.scss';
+import './App.css';
 import * as constants from './Constants';
 
 class App extends Component {
@@ -20,7 +20,11 @@ class App extends Component {
   render() {
     return (
       <div className='countdown'>
-        <span>{this.state.days}</span><span>day</span>{this.state.days > 1 && <span>s</span>} left
+        <div>
+          <span className='countdown__days'>{this.state.days}</span>
+          <span className='countdown__label'><span>day</span>{this.state.days > 1 && <span>s</span>}</span>
+          <span className='countdown__left'>left</span>
+        </div>
       </div>
     );
   }
