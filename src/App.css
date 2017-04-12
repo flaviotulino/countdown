@@ -28,10 +28,6 @@
 
 }
 
-.countdown > div > span {
-  margin-right: 10px;
-}
-
 .countdown__days {
   font-size: 3em;
 }
@@ -40,4 +36,24 @@
   position: relative;
   top: 50%;
   transform: translateY(-50%);
+  width: 50%;
+  margin: auto;
+}
+
+.countdown .col {
+  width: 100%;
+  display: block;
+}
+
+@media screen and (min-width: 767px) {
+  .countdown .col {
+    width: auto;
+    display: inline-block;
+    margin-right: 30px;
+  }
+}
+
+.countdown .row {
+  display: block;
+  width: 100%;
 }

@@ -27,4 +27,10 @@ describe('App component', function() {
     const app2 = ReactDOM.render(<App date='a date'/>,div);
     expect(app2.props.date).not.toMatch(/\d{2}\/\d{2}\/\d{4}/);
   });
+
+  it('getProgress() returns a percentage', function () {
+    const wrapper = shallow(<App date='05/02/2017'/>);
+    const app2 = wrapper.instance();
+    expect(app2.getProgress()).toBeDefined();
+  });
 });
